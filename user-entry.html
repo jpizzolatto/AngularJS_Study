@@ -1,0 +1,24 @@
+
+<div>
+    <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#deleteUser"
+            ng-click="platform.setUser(user)">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </button>
+
+    <button type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#editUser"
+            ng-click="platform.setUser(user)">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+    </button>
+
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" ng-src="http://localhost:3000/{{ user.photo }}">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{ user.name }}</h4>
+            {{ user.age }} years old
+        </div>
+    </div>
+</div>

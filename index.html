@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css"></link>
+</head>
+
+<body ng-controller="PlatformController as platform">
+
+	<menu-header></menu-header>
+
+	<div class="container-fluid" style="margin-top: 40px;">
+		<div class="row">
+			<div class="col-md-8 col-sm-offset-3 col-md-offset-2 main">
+				<h1 class="page-header text-center">Users</h1>
+
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#addUser">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true">
+						Add user
+					</span>
+				</button>
+
+				<div class="col-md-offset-1" style="margin-top: 10px;">
+
+					<ul class="list-group">
+
+						<li class="list-group-item" ng-repeat="user in platform.users">
+							<user-entry></user-entry>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<add-user-modal></add-user-modal>
+
+	<edit-user-modal></edit-user-modal>
+
+	<delete-user-modal></delete-user-modal>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="scripts/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
